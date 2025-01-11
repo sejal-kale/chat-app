@@ -17,8 +17,10 @@ app.use(cors())
 const PORT = process.env.PORT || 5000;
 
 try {
-    mongoose.connect("mongodb://localhost:27017/chat-app-db")
-    console.log("connect to mongo")
+    // mongoose.connect("mongodb://localhost:27017/chat-app-db")
+    mongoose.connect(process.env.URI)
+        .then(() => console.log('MongoDB connected'))
+        .catch(err => console.error('MongoDB connection error:', err)); console.log("connect to mongo")
 
 } catch (error) {
     console.log(error.message);
