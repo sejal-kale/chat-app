@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.flex-hide-scroll ::-webkit-scrollbar {
+    display: none;
+}
